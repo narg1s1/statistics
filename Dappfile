@@ -1,0 +1,36 @@
+dimg_group do
+  artifact do
+     docker.from 'node:8.11.3'
+
+     git do
+       add '/' do
+         to '/payever'
+       stage_dependencies.setup '*'
+       end
+     end
+
+     shell do
+       install do
+         run 'apt-get update',
+             'echo "machine gitlab.devpayever.com login deploybot password tVUeMCwr3SUWod4UGxDD" > ~/.netrc',
+             'apt-get install -y curl git bzip2 openssh-client --no-install-recommends '
+       end
+
+       setup do
+           run 'cd /payever/ && npm install ',
+               'cd /payever/ && npm run build'
+       end
+      end
+
+    export '/payever/dist' do
+      to '/usr/share/nginx/html'
+      after 'setup'
+    end
+  end
+
+  dimg 'statistics-frontend' do
+    docker.from 'registry.devpayever.com/nginx:master'
+  end
+
+  docker.expose 80
+end

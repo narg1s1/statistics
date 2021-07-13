@@ -1,0 +1,10 @@
+{
+  "code": "statistics",
+  "dashboardInfo": {
+    "title": "dashboard.apps.statistics",
+    "icon": "#icon-apps-statistics"
+  },
+  "tag": "<statistics-root></statistics-root>",
+  "url": "/business/{uuid}/statistics",
+  "bootstrapScriptUrl": "https://statistics-frontend.devpayever.com/micro.{hash}.js"
+}
