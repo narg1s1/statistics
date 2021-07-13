@@ -1,0 +1,81 @@
+<div class="data-grid-wrap" [ngClass]="theme">
+  <pe-statistics-material-styles></pe-statistics-material-styles>
+  <pe-data-grid
+    #dataGridComponent
+    [items]="[]"
+    [filters]="[]"
+    [filterItems]="filterItems"
+    [theme]="theme"
+    [navbarRightPaneButtons]="topNavOptions"
+    [isShowGridItemInfo]="true"
+    [dataListOptions]="gridOptions"
+    [displayFilters]="showSidebar$ | async"
+    [isFilterCreating]="true"
+    [enableDragAndDrop]="true"
+    [creatingFilterParentName]="'Albums'"
+    [sortByActions]="sortByActions"
+    [searchItems]="searchItems"
+    (searchChanged)="onSearchChanged($event)"
+    (searchRemove)="onSearchRemove($event)"
+  >
+    <pe-sidebar-filters-wrapper>
+      <pe-sidebar-header
+        title="{{ 'statistics.sidebar.title' | translate }}"
+        (closeSidebar)="showSidebar = false"
+        [allowClose]="false"
+      ></pe-sidebar-header>
+      <pe-sidebar-filter-wrapper
+        *ngFor="let category of categories"
+        [title]="category.title"
+        [expandable]="true"
+        [editable]="false"
+        [editMode]="false"
+        [active]="false"
+      >
+        <pe-tree-sidebar-filter
+          *ngIf="category.title !== 'Apps'"
+          [tree]="category.tree"
+          [multiple]="false"
+          [formControl]="formGroup.get('tree')"
+          [refresh]="refresh$"
+          (nodeClick)="nodeClick($event)"
+          (renameNode)="nodeRenamed($event)"
+        >
+        </pe-tree-sidebar-filter>
+
+        <pe-tree-sidebar-filter
+          *ngIf="category.title === 'Apps'"
+          [tree]="category.tree"
+          [multiple]="true"
+          [formControl]="formGroup.get('tree')"
+          [refresh]="refresh$"
+          (nodeClick)="nodeClick($event)"
+          (renameNode)="nodeRenamed($event)"
+        >
+        </pe-tree-sidebar-filter>
+      </pe-sidebar-filter-wrapper>
+    </pe-sidebar-filters-wrapper>
+
+    <pe-sidebar-footer-wrapper>
+      <pe-menu-sidebar-footer [menuData]="sideNavActionRail"></pe-menu-sidebar-footer>
+    </pe-sidebar-footer-wrapper>
+    <ng-container *ngIf="true">
+      <mat-grid-list [cols]="gridCols" [rowHeight]="(editMode$ | async) ? '180px' : '140px'" gutterSize="12px">
+        <mat-grid-tile
+          *ngFor="let widget of widgets$ | async"
+          [colspan]="widget.size === widgetService.widgetSize.Small ? 1 : 2"
+          [rowspan]="widget.size === widgetService.widgetSize.Large ? 2 : 1"
+          [class]="widget.size"
+        >
+          <peb-widget-wrapper
+            (click)="onClickToEdit($event, widget)"
+            [class]="widget.size"
+            [class.expanded]="editMode$ | async"
+            [config]="widget"
+            [showEditBtn]="widget.edit"
+          ></peb-widget-wrapper>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </ng-container>
+  </pe-data-grid>
+</div>

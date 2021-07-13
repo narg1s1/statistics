@@ -1,0 +1,59 @@
+:host {
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: #1c1c1e;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(50px);
+}
+
+section.content {
+  min-height: calc(100% - 64px);
+  height: fit-content;
+}
+
+:host.front-page section.content {
+  height: 100%;
+}
+
+.dark {
+  pe-new-platform-header {
+    background-color: #24272e;
+  }
+
+  height: fit-content;
+}
+.light {
+  .header-container {
+    .section-button {
+      color: #000;
+    }
+    .close-button {
+      background-color: #fff;
+      color: #000;
+    }
+    .section-left {
+      .dg-toggle {
+        filter: brightness(0%);
+      }
+    }
+  }
+  pe-new-platform-header {
+    background-color: #f3f2f8;
+  }
+
+  height: fit-content;
+}
+.transparent {
+  pe-new-platform-header {
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    background-color: rgba(36, 39, 46, 0.8);
+  }
+
+  height: fit-content;
+}

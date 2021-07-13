@@ -1,0 +1,27 @@
+{
+  "multiselect_widget": {
+    "all_methods": "All",
+    "cash": "Cash in Advance",
+    "stripe": "Credit Card",
+    "paymill_directdebit": "Direct Debit",
+    "invoice": "Invoice",
+    "payex_creditcard": "PayEx Credit Card",
+    "payex_faktura": "PayEx Invoice",
+    "paymill_creditcard": "Paymill Credit Card",
+    "paypal": "PayPal",
+    "santander_pos_installment": "POS Santander Installments",
+    "santander_pos_installment_dk": "POS Santander Installments Denmark",
+    "santander_pos_installment_no": "POS Santander Installments Norway",
+    "santander_pos_installment_se": "POS Santander Installments Sweden",
+    "santander_pos_invoice_no": "POS Santander Invoice Norway",
+    "santander_ccp_installment": "Santander DE Comfort card plus",
+    "santander_invoice_de": "Santander DE Invoice",
+    "santander_installment": "Santander Installments",
+    "santander_installment_dk": "Santander Installments Denmark",
+    "santander_installment_no": "Santander Installments Norway",
+    "santander_installment_se": "Santander Installments Sweden",
+    "santander_invoice_no": "Santander Invoice Norway",
+    "sofort": "SOFORT Banking",
+    "stripe_directdebit": "Stripe DirectDebit"
+  }
+}

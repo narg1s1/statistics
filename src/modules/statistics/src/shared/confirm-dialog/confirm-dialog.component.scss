@@ -1,0 +1,53 @@
+.confirm-container {
+  width: 408px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 36px;
+
+  &__icon {
+    width: 61px;
+    height: 56px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  &__buttons {
+    width: 216px;
+    margin-bottom: 8px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .confirm-container {
+    width: 330px;
+    height: 421px;
+    padding: 0 32px;
+  }
+}

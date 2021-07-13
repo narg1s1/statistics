@@ -1,0 +1,134 @@
+{
+  "statistics": {
+    "action": {
+      "add_widget": "Add widget",
+      "add_dashboard": "Add new dashboard",
+      "rename_dashboard": "Rename dashboard",
+      "delete_dashboard": "Delete dashboard",
+      "initial_dashboard": "Initial dashboard",
+      "new_dashboard": "New dashboard",
+      "back": "Back",
+      "next": "Next",
+      "done": "Done",
+      "add": "Add",
+      "remove_widget": "Remove widget",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "reset": "Reset"
+    },
+    "confirm_dialog": {
+      "delete_widget": "Are you really sure you want to delete this widget?"
+    },
+    "filters": {
+      "calendar": "Calendar",
+      "time_range": "Time range",
+      "currency": "Currency"
+    },
+    "widget_apps": {
+      "checkout": "Checkout",
+      "shipping": "Shipping",
+      "products": "Products",
+      "pos": "Point of Sale",
+      "transactions": "Transactions",
+      "shop": "Shop",
+      "contacts": "Contacts",
+      "cart": "Cart",
+      "studio": "Studio",
+      "ads": "Ads",
+      "site": "Site",
+      "invoice": "Invoice",
+      "subscriptions": "Subscriptions"
+    },
+    "overlay_titles": {
+      "add_widget": "Add widget",
+      "widget_style": "Widget style",
+      "edit_widget": "Edit widget"
+    },
+    "sidebar": {
+      "title": "Statistics",
+      "subtitle_my": "My statistics",
+      "subtitle_calendar": "Calendar",
+      "calendar": {
+        "today": "Today",
+        "last_week": "Last week",
+        "last_month": "Last month"
+      },
+      "subtitle_apps": "Apps"
+    },
+    "form_fields": {
+      "expandable_panels": {
+        "preview": "Preview",
+        "content": "Content"
+      },
+      "widget_name": "Widget name",
+      "field": "Field",
+      "channels": "Chennels",
+      "businesses": "Businesses",
+      "granularity": "Granularity",
+      "devices_label": "Devices",
+      "browsers_label": "Browsers",
+      "time_frame_label": "Time frame",
+      "time_frame_options": {
+        "hourly": "Hourly",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "last_week": "Last week",
+        "last_month": "Last month",
+        "last_year": "Last year",
+        "date_range": "Date range"
+      },
+      "start_date": "Start date",
+      "end_date": "End date",
+      "payment_status_options": {
+      },
+      "currency_label": "Currency",
+      "currency_options": {
+        "usd": "USD",
+        "eur": "EUR",
+        "dkk": "DKK",
+        "se": "SE",
+        "nok": "NOK"
+      },
+      "devices_options": {
+        "desktop": "Desktop",
+        "tablet": "Tablet",
+        "mobile": "Mobile"
+      },
+      "browsers_options": {
+        "chrome": "Chrome",
+        "safari": "Safari",
+        "internet_explorer": "Internet Explorer"
+      },
+      "payment_method_label": "Payment method",
+      "metric_groups": {
+        "behavior_metric": "Behavior metrics",
+        "conversion_metric": "Conversion metric",
+        "payment_status": "Payment status"
+      },
+      "metric_optons": {
+        "countSessions": "Sessions (payment flows)",
+        "exitRate": "Exit rate",
+        "sessionDuration": "Session duration",
+        "conversionRate": "Conversion rate",
+        "revenue": "Revenue",
+        "rateRefundPayments": "Refund rate",
+        "ratePaidPayments": "Paid rate",
+        "rateNewPayments": "New rate",
+        "rateSuccessPayments": "Successful payments",
+        "maxSuccessPayments": "Max success payments",
+        "minSuccessPayments": "Min success payments",
+        "totalCount": "Total count",
+        "countSuccessPayments": "Successful payments count",
+        "countUnsuccessfulPayments": "Unsuccessful payments count",
+        "countRefunds": "Refund count",
+        "countPaidPayments": "Paid payments count",
+        "countNewPayments": "New payments count",
+        "averageSuccessPayments": "Average success payments"
+      }
+    }
+  }
+}

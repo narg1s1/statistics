@@ -1,0 +1,163 @@
+.two-columns {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    line-height: normal;
+  }
+  &__currency {
+    font-size: 11px;
+    color: #78787d;
+    line-height: normal;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    .feature {
+      margin-top: 23px;
+      &__label {
+        font-size: 10px;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #434343;
+        margin-bottom: 8px;
+        line-height: normal;
+      }
+      &__value {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+  &__profit {
+    font-size: 10px;
+    font-weight: 500;
+    color: #00f67d;
+    margin-top: 19px;
+    line-height: normal;
+  }
+}
+
+:host {
+  font-family: 'Roboto', sans-serif;
+  &.small {
+  }
+  &.medium {
+    .two-columns {
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        .feature {
+          margin-top: 12px;
+          width: calc(50% - 16px);
+          &__label {
+            font-size: 11px;
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+          }
+          &__value {
+            font-size: 32px;
+            font-weight: 500;
+          }
+        }
+      }
+      &__profit {
+        font-size: 14px;
+        color: #00f67d;
+        margin-top: 11px;
+      }
+    }
+  }
+  &.large {
+    .two-columns {
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        .feature {
+          margin-top: 92px;
+          width: calc(50% - 16px);
+          &__label {
+            font-size: 11px;
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+          }
+          &__value {
+            font-size: 32px;
+            font-weight: 500;
+          }
+        }
+      }
+      &__profit {
+        font-size: 14px;
+        color: #00f67d;
+        margin-top: 80px;
+      }
+    }
+  }
+
+  &.dark-widget {
+    .two-columns {
+      &__title {
+        color: #fff;
+      }
+      &__body {
+        .feature {
+          &__label {
+            color: #fff;
+          }
+          &__value {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &.light-widget {
+    .two-columns {
+      &__title {
+        color: #000;
+      }
+      &__body {
+        .feature {
+          &__label {
+            color: #000;
+          }
+          &__value {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  &.transparent-widget {
+    .two-columns {
+      &__title {
+        color: #fff;
+      }
+      &__body {
+        .feature {
+          &__label {
+            color: #fff;
+          }
+          &__value {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.done-btn {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0371e2;
+  cursor: pointer;
+}

@@ -1,0 +1,120 @@
+@import '~@pe/ui/theming/theming';
+@import '~@pe/ui/theming/all-theme';
+
+$theme-dark: peb-theme-choose('dark');
+$theme-light: peb-theme-choose('light');
+$theme-transparent: peb-theme-choose('transparent');
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('Open Sans-Regular'),
+    url('../../../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../../../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff')
+      format('woff'); /* Modern Browsers */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+
+  &.dark {
+    @include peb-theme($theme-dark);
+    .cdk-overlay-pane {
+      margin-top: 0;
+      @include peb-theme($theme-dark);
+
+      .last {
+        .label-input-content-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .peb-checkbox-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .label-select-wrapper {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  &.light {
+    @include peb-theme($theme-light);
+    .cdk-overlay-pane {
+      margin-top: 0;
+      @include peb-theme($theme-light);
+
+      .last {
+        .label-input-content-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .peb-checkbox-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .label-select-wrapper {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  &.transparent {
+    @include peb-theme($theme-transparent);
+    .cdk-overlay-pane {
+      margin-top: 0;
+      @include peb-theme($theme-transparent);
+
+      .last {
+        .label-input-content-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .peb-checkbox-wrapper {
+          border-bottom: 0 !important;
+        }
+
+        .label-select-wrapper {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+
+  &.wider-overlay {
+    .overlay-widget-container {
+      max-width: 480px;
+    }
+  }
+
+  &.remove-overlay-content-padding {
+    .overlay-widget__content {
+      padding: 0;
+    }
+  }
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+select,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+.icon-16 {
+  width: 16px;
+  height: 16px;
+}

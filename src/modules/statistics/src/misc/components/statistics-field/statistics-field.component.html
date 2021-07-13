@@ -1,0 +1,13 @@
+<form [formGroup]="formGroup">
+  <div class="field">
+    <div class="field__body">
+      <input [readonly]="readonly" type="text" formControlName="fieldValue" (input)="onValueChanged($event)" />
+      <span [class.error]="errorMessage">{{ errorMessage ? errorMessage : (optionsSelected | selectedOptions) }}</span>
+    </div>
+    <div class="field__arrow" (click)="openFieldFunc(this.id)">
+      <svg>
+        <use href="#icon-ui-arrow-open"></use>
+      </svg>
+    </div>
+  </div>
+</form>

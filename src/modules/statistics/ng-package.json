@@ -1,0 +1,34 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/libs/statistics",
+  "lib": {
+    "entryFile": "src/index.ts",
+
+    "umdModuleIds": {
+      "lodash": "lodash",
+      "@angular/material":  "@angular/material",
+      "@angular/cdk": "@angular/cdk",
+      "ngx-scrollbar": "ngx-scrollbar",
+      "moment": "moment",
+      "ng2-charts": "ng2-charts",
+      "lodash-es": "lodash-es",
+      "@swimlane/ngx-charts": "@swimlane/ngx-charts",
+
+      "@pe/platform-header":  "@pe/platform-header",
+      "@pe/data-grid": "@pe/data-grid",
+      "@pe/sidebar": "@pe/sidebar",
+      "@pe/filters": "@pe/filters",
+      "@pe/overlay-widget": "@pe/overlay-widget",
+      "@pe/ui": "@pe/ui",
+      "@pe/auth": "@pe/auth",
+      "@pe/common": "@pe/common",
+      "@pe/media": "@pe/media",
+      "@pe/i18n": "@pe/i18n",
+      "@pe/i18n-core": "@pe/i18n-core"
+    }
+  },
+  "assets": [
+    "./assets",
+    "bin"
+  ]
+}

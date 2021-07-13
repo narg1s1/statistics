@@ -1,0 +1,13 @@
+<div class="confirm-container">
+  <mat-icon class="confirm-container__icon" svgIcon="icon-warning"></mat-icon>
+  <span class="confirm-container__title">{{ overlayData.contents.title }}</span>
+  <span class="confirm-container__subtitle">
+    {{ overlayData.contents.subtitle }}
+  </span>
+  <button peb-button color="warn" class="confirm-container__buttons" (click)="onConfirm()">
+    {{ overlayData.contents.confirmButton }}
+  </button>
+  <button peb-button class="confirm-container__buttons" (click)="onDecline()">
+    {{ overlayData.contents.declineButton }}
+  </button>
+</div>

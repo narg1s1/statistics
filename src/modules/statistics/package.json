@@ -1,0 +1,17 @@
+{
+  "name": "@pe/statistics",
+  "version": "1.0.2",
+  "description": "Statistics",
+  "repository": "https://gitlab.devpayever.com/frontend/statistics",  
+  "bin": {
+    "pe-i18n-cosf-prepare-statistics-app": "./bin/i18n-cosf-prepare.js"
+  },
+  "dependencies": {
+    "tslib": "2.1.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.4",
+    "@angular/core": "^9.1.4",
+    "@angular/material": "^9.2.4"
+  }
+}

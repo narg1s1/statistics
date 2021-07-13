@@ -1,0 +1,15 @@
+.statistics-scroll {
+  height: 60vh;
+
+  .form-container {
+    width: 100%;
+  }
+}
+
+.statistics-preview {
+  display: flex;
+  justify-content: center;
+  .small {
+    max-width: 142px;
+  }
+}

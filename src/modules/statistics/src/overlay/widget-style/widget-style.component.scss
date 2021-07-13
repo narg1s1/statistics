@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  width: 480px;
+}
+
+.widget-style {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .widget {
+    flex: 1 0 26%;
+    max-width: 142px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  :host {
+    width: auto;
+  }
+  .widget-style {
+    .widget {
+      margin-right: calc(100% - 280px);
+      &:nth-child(3n) {
+        margin-right: calc(100% - 280px);
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
